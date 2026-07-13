@@ -718,7 +718,7 @@ export default function App() {
         <div>
           <div style={{ color: T.white, fontWeight: 700, fontSize: 16 }}>My Water Manager</div>
           <div style={{ color: "#6B9DC2", fontSize: 11, letterSpacing: "0.06em", textTransform: "uppercase" }}>
-            Dealer Configuration Portal
+            OEM Configuration Portal
           </div>
         </div>
       </div>

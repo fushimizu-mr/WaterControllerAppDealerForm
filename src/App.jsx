@@ -9,7 +9,7 @@ const FORMSPREE_ENDPOINT = "https://formspree.io/f/xaqrykek";
 const SECTIONS = [
   { id: "app-info",       label: "App Information",  icon: "⚙" },
   { id: "filter-catalog", label: "Filter Catalog",   icon: "🔬" },
-  { id: "dealer-info",    label: "Dealer Profile",   icon: "🏢" },
+  { id: "dealer-info",    label: "OEM Profile",   icon: "🏢" },
   { id: "branding",       label: "Branding & Theme", icon: "🎨" },
   { id: "documentation",  label: "Documentation",    icon: "📄" },
 ];
@@ -420,11 +420,11 @@ function SectionDealerInfo({ data, setData }) {
   return (
     <div>
       <SectionHeader
-        title="Dealer Profile"
-        subtitle="Displayed on the support and contact screens within the app."
+        title="Default Dealer Profile"
+        subtitle="Displayed on the support and contact screens within the app until modified by installer or technician."
       />
       <FieldGroup columns={2}>
-        <Field label="Dealer / Business Name" required>
+        <Field label="Deafault Dealer / Business Name" required>
           <Input value={d.name || ""} onChange={e => update("name", e.target.value)} placeholder="e.g. Crusader Water Systems" />
         </Field>
         <Field label="Contact Phone">
@@ -439,6 +439,7 @@ function SectionDealerInfo({ data, setData }) {
           <Input value={d.website || ""} onChange={e => update("website", e.target.value)} placeholder="https://yourcompany.com" />
         </Field>
       </FieldGroup>
+      /*
       <FieldGroup>
         <Field label="Service Coverage Area">
           <Input value={d.coverage || ""} onChange={e => update("coverage", e.target.value)} placeholder="e.g. Pacific Northwest, ZIP codes 97xxx-98xxx" />
@@ -449,6 +450,7 @@ function SectionDealerInfo({ data, setData }) {
           <Textarea value={d.bio || ""} onChange={e => update("bio", e.target.value)} placeholder="Short paragraph about your business shown on the About screen." />
         </Field>
       </FieldGroup>
+      */
       <FieldGroup columns={2}>
         <Field label="Business Hours">
           <Input value={d.hours || ""} onChange={e => update("hours", e.target.value)} placeholder="Mon-Fri 8am-5pm PT" />
@@ -458,7 +460,7 @@ function SectionDealerInfo({ data, setData }) {
         </Field>
       </FieldGroup>
       <ImageUrlField
-        label="Dealer Logo"
+        label="Default Dealer Logo"
         aspectHint="SVG or PNG, min 400×200px"
         value={d.logoUrl}
         onChange={e => update("logoUrl", e.target.value)}

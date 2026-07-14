@@ -426,7 +426,7 @@ function FilterCard({ index, filter, onChange, onRemove }) {
         <div style={{ marginTop: 20 }}>
           <FieldGroup columns={2}>
             <Field label="Name" required>
-              <Input value={filter.name || ""} onChange={e => update("name", e.target.value)} placeholder="e.g. ProGuard Carbon Block" />
+              <Input value={filter.name || ""} onChange={e => update("name", e.target.value)} placeholder="e.g. Carbon Block 10 Micron" />
             </Field>
             <Field label="Subtitle">
               <Input value={filter.subtitle || ""} onChange={e => update("subtitle", e.target.value)} placeholder="e.g. Stage 1 Sediment Reduction" />
@@ -434,7 +434,7 @@ function FilterCard({ index, filter, onChange, onRemove }) {
           </FieldGroup>
           <FieldGroup columns={2}>
             <Field label="Model Number" required>
-              <Input value={filter.modelNumber || ""} onChange={e => update("modelNumber", e.target.value)} placeholder="e.g. PG-CB-10" style={{ fontFamily: "monospace" }} />
+              <Input value={filter.modelNumber || ""} onChange={e => update("modelNumber", e.target.value)} placeholder="e.g. CB-10" style={{ fontFamily: "monospace" }} />
             </Field>
             <Field label="Filtration Level">
               <Input value={filter.filtrationLevel || ""} onChange={e => update("filtrationLevel", e.target.value)} placeholder="e.g. 0.5 micron" />
